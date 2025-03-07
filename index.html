@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://aminmirz.github.io/gelbelt/"/>
+    <title>SocialGestureRec</title>
+    
+    <meta name="description" content="Social Gesture Recognition in spHRI: Leveraging Fabric-Based Tactile Sensing on Humanoid Robots">
+    <meta name="keywords" content="HRI, Dakarai, Crowder">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ window.dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Social Gesture Recognition in SpHRI: Leveraging Fabric-Based Tactile Sensing on Humanoid Robots</h1>
+
+        </header>
+
+        <div class="authors">
+            <a href="https://aminmirz.github.io/">Dakarai Crowder</a><sup>1</sup>,&emsp;
+            Kojo Vandyck</a><sup>1</sup>,&emsp;
+            <a href="https://scholar.google.com/citations?user=xuIoyJEAAAAJ&hl=en">Xiping Sun</a><sup>1</sup>,&emsp;
+            <a href="https://www.cs.cmu.edu/~jmccann/">James McCann</a><sup>2</sup>,&emsp;
+            <a href="https://siebelschool.illinois.edu/about/people/all-faculty/yuanwz">Wenzhen Yuan</a><sup>1</sup>
+            
+        </div>
+
+        <div class="institutions">
+            <p><sup>1</sup>&nbsp;University of Illinois at Urbana-Champaign,&ensp;
+                <sup>2</sup>&nbsp;Carnegie Mellon University</p>
+        </div>
+
+        <div class="document-links">
+            <a href="https://arxiv.org/abs/2503.03234" class="icon-button" target="_blank">
+                <i class="ai ai-arxiv"></i> ArXiv
+            </a>
+        </div>
+
+        <main>
+
+            <section class="media">
+                <img src="./media/figs/teaser_robotsweater_v5.png" alt="Teaser Image" width="70%">
+                <br>
+            </section>
+
+
+            <section class="sec">
+                <h1>ABSTRACT</h1>
+                <p style="text-align: justify;">
+                    Humans are able to convey different messages using only touch. Equipping robots with the ability to understand social touch adds another modality in which humans and robots can communicate. 
+                    In this paper, we present a social gesture recognition system using a fabric-based, large-scale tactile sensor placed onto the arms of a humanoid robot. We built a social gesture dataset using multiple participants and extracted temporal features for classification. 
+                    By collecting tactile data on a humanoid robot, our system provides insights into human-robot social touch, and displays that the use of fabric based sensors could be a potential way of advancing the development of spHRI systems for more natural and effective communication.
+
+                </p>
+            </section>
+
+            <hr>
+
+            <section class="media">
+                <h1>Social Gesture Signals</h1>
+                <p style="text-align: justify;">
+                    We performed six different types of gestures and collected the signals from differing users to create a dataset. Our system was able to produce signals which could be differintated for the gestures selected.
+                    Below displays the the gesuture being performed, the digitial output of the signal, and the temporal feature extracted which was the  number of taxels actived.
+                </p>
+                <img src="./media/figs/gestful_v6.png" alt="Profile">
+                <p style="text-align: justify;">
+                    These are the six gestures used to create our dataset. We had different participants perform each gesture on the sensor. For the temporal feature display we extracted the first 32 frames of the gesture and recored the numnber of taxels actived per frame.
+                </p>
+                <div class="img-row">
+                    <img src="./media/figs/reachy_in_dif_v3.png" alt="Profile">
+                    <img src="./media/figs/sensor_fab_v2.png" alt="Profile">
+                </div>
+                <p style="text-align: justify;">
+                    We placed the sensor on the links of the robot to help create a more stable sensor reading if the robot were in motion.
+                </p>
+            </section>
+    
+            <hr>
+
+            <section class="media">
+                <h1>Gesture Recognition</h1>
+                <p style="text-align: justify;">
+                    We used a MLP to classify our dataset. The six different gestures, which are displayed above, were used to demonstrate the ability
+                    of the system to distingush different types of gestures. 
+                </p>
+                <img src="./media/figs/confusion_matrix.png" alt="Profile" width="50%">
+                <p style="text-align: justify;">
+                   Our model yeilded an accuracy of 81%. There is still much to improve on with our
+                    system and dataset creation but the results seem promising. 
+                </p>
+            </section>
+
+            <hr>
+            
+            <section class="media">   
+                <h1>Summary Video</h1>
+                <p style="text-align: justify;">
+                    You can find a demostration of someone performing the gestures on the sensor in the video displayed below.
+                </p>
+                <video controls poster="./media/thumn.png">
+                    <source src="./media/sweater_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+            <hr>
+
+            
+            <section class="sec">
+                <h1>BibTeX</h1>
+
+                <div class="bibtex">
+                    <!-- <div class="bibtex-container">
+                        <pre id="bibtex-content">@ARTICLE{mirzaee2025gelbelt,
+        author={Mirzaee, Mohammad Amin and Huang, Hung-Jui and Yuan, Wenzhen},
+        journal={IEEE Robotics and Automation Letters}, 
+        title={GelBelt: A Vision-based Tactile Sensor for Continuous Sensing of Large Surfaces}, 
+        year={2025},
+        volume={},
+        number={},
+        pages={1-8},
+        doi={10.1109/LRA.2025.3527306}}</pre>
+                    </div> -->
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <img src="./media/University-Wordmark-Full-Color-RGB.png" alt="Profile" width="200px">
+            <!-- <p>&copy; 2025 Amin Mirzaee</p> -->
+        </footer>
+    </div>
+</body>
+</html>
